@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#f3f6fa" />
+  <meta name="description" content="약 이름을 검색해 주요 작용과 대표적인 부작용을 확인해 보세요." />
+  <title>약 정보 찾기</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Noto+Sans+KR:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <header class="topbar glass">
+      <a class="brand" href="#home" aria-label="약 정보 찾기 홈">
+        <span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8.2 3.5a6.65 6.65 0 0 0-4.7 11.35l5.65 5.65a6.65 6.65 0 0 0 9.4-9.4L12.9 5.45A6.63 6.63 0 0 0 8.2 3.5Zm-3 9.3a4.25 4.25 0 0 1 6-6l1.25 1.25-6 6L5.2 12.8Zm8.3 6-1.35-1.35 6-6 1.4 1.4a4.25 4.25 0 0 1-6.05 5.95Z"/></svg></span>
+        <span>약 정보<span class="brand-dot">.</span></span>
+      </a>
+      <div class="header-note"><span class="status-dot"></span>일부 일반 의약품 정보</div>
+    </header>
+
+    <main class="main-content" id="home">
+      <section class="search-panel glass" aria-labelledby="page-title">
+        <div class="hero-icon" aria-hidden="true"><svg viewBox="0 0 48 48"><path d="M16.1 7.5a11 11 0 0 0-7.8 18.8l13.4 13.4a11 11 0 0 0 15.6-15.6L23.9 10.7a11 11 0 0 0-7.8-3.2Zm-4.4 15.9a7 7 0 0 1 9.9-9.9l3.1 3.1-9.9 9.9-3.1-3.1Zm13.5 13.5-3.2-3.2 9.9-9.9 3.2 3.2a7 7 0 0 1-9.9 9.9Z"/></svg></div>
+        <p class="eyebrow">MEDICINE QUICK GUIDE</p>
+        <h1 id="page-title">약 이름으로<br class="mobile-break"> 기본 정보를 찾아보세요</h1>
+        <p class="intro">약의 주요 작용과 대표적인 부작용을<br class="desktop-break"> 한 화면에서 간단히 확인할 수 있어요.</p>
+
+        <form class="search-form" id="searchForm" role="search">
+          <label class="sr-only" for="medicineSearch">약 이름</label>
+          <svg class="search-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.8"></circle><path d="m16 16 4.2 4.2"></path></svg>
+          <input id="medicineSearch" name="medicine" type="search" placeholder="예: 타이레놀, 이부프로펜" autocomplete="off" aria-describedby="searchHint">
+          <button class="button button-primary" type="submit">검색 <span aria-hidden="true">↗</span></button>
+        </form>
+        <p id="searchHint" class="search-hint">제품명 또는 성분명을 입력해 주세요.</p>
+
+        <div class="examples" aria-label="검색 예시">
+          <span class="examples-label">바로 검색</span>
+          <button class="chip" type="button" data-query="타이레놀">타이레놀</button>
+          <button class="chip" type="button" data-query="이부프로펜">이부프로펜</button>
+          <button class="chip" type="button" data-query="세티리진">세티리진</button>
+          <button class="chip" type="button" data-query="로라타딘">로라타딘</button>
+        </div>
+        <details class="medicine-catalog">
+          <summary>검색 가능한 약 30종 모두 보기</summary>
+          <div class="catalog-groups">
+            <div class="catalog-group"><h2>통증 · 알레르기</h2><div class="catalog-chips">
+              <button class="chip" type="button" data-query="타이레놀">아세트아미노펜</button><button class="chip" type="button" data-query="이부프로펜">이부프로펜</button><button class="chip" type="button" data-query="나프록센">나프록센</button><button class="chip" type="button" data-query="아스피린">아스피린</button><button class="chip" type="button" data-query="세티리진">세티리진</button><button class="chip" type="button" data-query="로라타딘">로라타딘</button><button class="chip" type="button" data-query="펙소페나딘">펙소페나딘</button><button class="chip" type="button" data-query="디펜히드라민">디펜히드라민</button><button class="chip" type="button" data-query="클로르페니라민">클로르페니라민</button>
+            </div></div>
+            <div class="catalog-group"><h2>소화 · 배변</h2><div class="catalog-chips">
+              <button class="chip" type="button" data-query="파모티딘">파모티딘</button><button class="chip" type="button" data-query="오메프라졸">오메프라졸</button><button class="chip" type="button" data-query="탄산칼슘">탄산칼슘</button><button class="chip" type="button" data-query="비스무트 서브살리실레이트">비스무트 서브살리실레이트</button><button class="chip" type="button" data-query="로페라마이드">로페라마이드</button><button class="chip" type="button" data-query="폴리에틸렌글리콜 3350">폴리에틸렌글리콜 3350</button><button class="chip" type="button" data-query="비사코딜">비사코딜</button><button class="chip" type="button" data-query="도쿠세이트 나트륨">도쿠세이트</button><button class="chip" type="button" data-query="센나">센나</button><button class="chip" type="button" data-query="시메티콘">시메티콘</button>
+            </div></div>
+            <div class="catalog-group"><h2>기침 · 코</h2><div class="catalog-chips">
+              <button class="chip" type="button" data-query="덱스트로메토르판">덱스트로메토르판</button><button class="chip" type="button" data-query="구아이페네신">구아이페네신</button><button class="chip" type="button" data-query="슈도에페드린">슈도에페드린</button><button class="chip" type="button" data-query="옥시메타졸린">옥시메타졸린</button><button class="chip" type="button" data-query="플루티카손 비강 스프레이">플루티카손 비강 스프레이</button>
+            </div></div>
+            <div class="catalog-group"><h2>피부 · 외용</h2><div class="catalog-chips">
+              <button class="chip" type="button" data-query="하이드로코르티손 크림">하이드로코르티손</button><button class="chip" type="button" data-query="클로트리마졸 크림">클로트리마졸</button><button class="chip" type="button" data-query="테르비나핀 크림">테르비나핀</button><button class="chip" type="button" data-query="디클로페낙 겔">디클로페낙 겔</button><button class="chip" type="button" data-query="벤조일퍼옥사이드">벤조일퍼옥사이드</button><button class="chip" type="button" data-query="미녹시딜 외용액">미녹시딜</button>
+            </div></div>
+          </div>
+        </details>
+      </section>
+
+      <section class="result-region" id="resultRegion" aria-live="polite" aria-atomic="true">
+        <div class="empty-state glass" id="emptyState">
+          <div class="empty-mark" aria-hidden="true"><svg viewBox="0 0 32 32"><path d="M11 4.5a7 7 0 0 0-5 12l9.5 9.5a7 7 0 0 0 10-10L16 6.5a7 7 0 0 0-5-2Zm-2.9 9.8a4 4 0 0 1 5.7-5.7l2.1 2.1-5.7 5.7-2.1-2.1Zm10.8 10.8-2.1-2.1 5.7-5.7 2.1 2.1a4 4 0 0 1-5.7 5.7Z"/></svg></div>
+          <p class="empty-title">검색 결과가 여기에 표시돼요</p>
+          <p class="empty-copy">위 검색창에 약 이름을 입력하거나<br>예시 약을 선택해 보세요.</p>
+        </div>
+        <article class="result-card glass hidden" id="resultCard" aria-labelledby="resultName">
+          <div class="result-heading">
+            <div><p class="result-kicker">검색한 약</p><h2 id="resultName"></h2><p class="ingredient-line" id="ingredientLine"></p></div>
+            <span class="result-badge"><span></span>정보 확인</span>
+          </div>
+          <div class="info-grid">
+            <section class="info-block action-block" aria-labelledby="actionHeading">
+              <div class="block-heading"><span class="block-icon action-icon" aria-hidden="true">↗</span><h3 id="actionHeading">주요 작용</h3></div>
+              <p id="actionText"></p>
+            </section>
+            <section class="info-block side-effect-block" aria-labelledby="sideEffectHeading">
+              <div class="block-heading"><span class="block-icon side-icon" aria-hidden="true">!</span><h3 id="sideEffectHeading">대표 부작용</h3></div>
+              <ul id="sideEffects"></ul>
+            </section>
+          </div>
+          <div class="result-footnote"><span class="info-symbol" aria-hidden="true">i</span><p id="resultNote"></p></div>
+          <div class="source-row"><span>참고 라벨</span><a id="sourceLink" href="#" target="_blank" rel="noopener noreferrer">공식 의약품 라벨 보기 ↗</a></div>
+        </article>
+        <div class="not-found glass hidden" id="notFound">
+          <span class="not-found-icon" aria-hidden="true">⌕</span>
+          <h2>등록된 약 정보를 찾지 못했어요</h2>
+          <p id="notFoundMessage"></p>
+          <p class="not-found-tip">검색 가능한 약 30종은 위의 ‘검색 가능한 약 모두 보기’에서 확인할 수 있어요.</p>
+        </div>
+      </section>
+
+      <aside class="notice glass" aria-label="안내">
+        <span class="notice-icon" aria-hidden="true">i</span>
+        <p>참고 라벨은 미국 DailyMed의 일부 제품 기준이며 국내 제품의 성분·제형·안내와 다를 수 있어요. 복용 전에는 가지고 있는 제품의 설명서와 약사 또는 의사의 안내를 확인해 주세요.</p>
+      </aside>
+    </main>
+    <footer class="footer">필요한 약 정보를 차분하게, 한눈에.</footer>
+  </div>
+  <script type="module" src="app.js"></script>
+</body>
+</html>
+
